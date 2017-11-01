@@ -1,0 +1,21 @@
+{
+    "name": "sliverwing/laravel-dingtalk-bot-channel",
+    "description": "This package makes it easy to send notifications using Dingtalk Bot",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sliverwing",
+            "email": "tlv591208510@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sliverwing\\DingtalkBotChannel\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0.0"
+    }
+}
