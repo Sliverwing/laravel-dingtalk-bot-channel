@@ -47,6 +47,16 @@ class Message
         return $this;
     }
 
+    public function markdown(string $title, string $text)
+    {
+        $this->msgType = 'markdown';
+        $data = [];
+        $data['title'] = $title;
+        $data['text'] = $text;
+        $this->content = $data;
+        return $this;
+    }
+
     public function at(array $mobiles, bool $isAtAll)
     {
         $this->atMobiles = $mobiles;

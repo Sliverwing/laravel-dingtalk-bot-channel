@@ -62,6 +62,11 @@ class DingtalkBotChannel
                 $data['msgtype'] = 'link';
                 $data['link'] = $message->content;
                 break;
+            case 'markdown':
+                $data['msgtype'] = 'markdown';
+                $data['markdown'] = $message->content;
+                $data['at']['atMobiles'] = $message->getAtMobiles();
+                $data['at']['isAtAll'] = $message->getIsAtAll();
         }
         return json_encode($data);
     }
