@@ -57,6 +57,20 @@ class Message
         return $this;
     }
 
+    public function actionCard(string $title, string $text, string $singleTitle, string $singleURL, string $btnOrientation = '0', string $hideAvatar = '0')
+    {
+        $this->msgType = 'actionCard';
+        $data = [];
+        $data['title'] = $title;
+        $data['text'] = $text;
+        $data['singleTitle'] = $singleTitle;
+        $data['singleURL'] = $singleURL;
+        $data['btnOrientation'] = $btnOrientation;
+        $data['hideAvatar'] = $hideAvatar;
+        $this->content = $data;
+        return $this;
+    }
+
     public function at(array $mobiles, bool $isAtAll)
     {
         $this->atMobiles = $mobiles;
