@@ -72,6 +72,10 @@ class DingtalkBotChannel
                 $data['msgtype'] = 'actionCard';
                 $data['actionCard'] = $message->content;
                 break;
+	        case 'feedCard':
+				$data['msgtype']  = 'feedCard';
+				$data['feedCard'] = $message->content;
+				break;
         }
         return json_encode($data);
     }

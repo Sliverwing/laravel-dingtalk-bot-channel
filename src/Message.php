@@ -71,6 +71,15 @@ class Message
         return $this;
     }
 
+    public function feedCard(array $cards)
+    {
+		$this->msgType = 'feedCard';
+//    	TODO: add validation
+	    $data['links'] = $cards;
+	    $this->content = $data;
+	    return $this;
+    }
+
     public function at(array $mobiles, bool $isAtAll)
     {
         $this->atMobiles = $mobiles;
